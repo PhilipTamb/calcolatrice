@@ -1,7 +1,7 @@
-package com.example.calcolatrice.Service;
+package com.example.calcolatrice.service;
 
-import com.example.calcolatrice.Model.Calcolatrice;
-import com.example.calcolatrice.Repository.CalcolatriceRepository;
+import com.example.calcolatrice.model.Calcolatrice;
+import com.example.calcolatrice.repository.CalcolatriceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

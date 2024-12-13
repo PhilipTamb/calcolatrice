@@ -1,7 +1,7 @@
-package com.example.calcolatrice.Controller;
+package com.example.calcolatrice.controller;
 
-import com.example.calcolatrice.Model.Calcolatrice;
-import com.example.calcolatrice.Service.ICalcolatriceService;
+import com.example.calcolatrice.model.Calcolatrice;
+import com.example.calcolatrice.service.ICalcolatriceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

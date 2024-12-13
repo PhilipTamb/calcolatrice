@@ -1,6 +1,6 @@
-package com.example.calcolatrice.Service;
+package com.example.calcolatrice.service;
 
-import com.example.calcolatrice.Model.Calcolatrice;
+import com.example.calcolatrice.model.Calcolatrice;
 
 public interface ICalcolatriceService {
 

@@ -1,4 +1,4 @@
-package com.example.calcolatrice.Repository;
+package com.example.calcolatrice.repository;
 
 public interface CalcolatriceRepository {
 }

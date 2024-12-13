@@ -15,7 +15,7 @@ public class UtenteController {
     private UtenteService utenteService;
 
     @GetMapping("/{uuid}")
-    public UtenteDTO findById(@PathVariable String uuid ){
+    public UtenteDTO findByUuid(@PathVariable String uuid ){
         return utenteService.findByUuid( uuid );
     }
 

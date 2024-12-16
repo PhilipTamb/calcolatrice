@@ -1,5 +1,7 @@
 package com.example.calcolatrice.configuration;
 
+import com.example.calcolatrice.model.Utente;
+import com.example.calcolatrice.repository.UtenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -23,15 +25,14 @@ public class CustomUserDetailsService implements UserDetailsService {
         if (!optionalUtente.isPresent()) {
             throw new UsernameNotFoundException("User not found");
         }
-        utente = optionalUtente.get();
+        Utente utente = optionalUtente.get();
 
 
         // Build a UserDetails object
-        UserDetails userDetails = User.withUsername(utente.getUsername())
-                .password(utente.getPassword())
-                .roles(utente.getRoles())
-                .build();
 
-        return userDetails;
+        return User.withUsername(utente.getName())
+                .password(utente.getPassword())
+                .roles("USER")
+                .build();
     }
 }

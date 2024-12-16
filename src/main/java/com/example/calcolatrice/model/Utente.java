@@ -17,6 +17,7 @@ public class Utente {
     private Long id;
 
     private String uuid;
+    @Getter
     @Column(nullable = false)
     private String name;
     @Column(nullable = false)
@@ -24,4 +25,5 @@ public class Utente {
     @Column(nullable = false)
     @Email
     private String address;
+
 }

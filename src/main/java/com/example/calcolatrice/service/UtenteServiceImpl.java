@@ -5,6 +5,8 @@ import com.example.calcolatrice.exception.NoDataFoundException;
 import com.example.calcolatrice.model.Utente;
 import com.example.calcolatrice.repository.UtenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
@@ -42,5 +44,10 @@ public class UtenteServiceImpl implements UtenteService{
     public UtenteDTO save(UtenteDTO utente) {
         utente.setUuid(String.valueOf(UUID.randomUUID()));
         return modelToDTO(utenteRepository.save( dtoToModel(utente) ));
+    }
+
+    @Override
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 }

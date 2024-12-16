@@ -33,7 +33,7 @@ public class ReportServiceImpl implements ReportService {
 
     @Override
     public List<ReportDTO> getReportsWithMoreThanNUtillizzi(int threshold) {
-        return reportRepository.findByNUtilizziGreaterThan(threshold)
+        return reportRepository.findByUtilizziGreaterThan(threshold)
                 .stream()
                 .map(this::modelToDto)
                 .toList();
@@ -66,7 +66,7 @@ public class ReportServiceImpl implements ReportService {
         return ReportDTO.builder()
                 .uuid(report.getUuid())
                 .userUuid(report.getUserUuid())
-                .nUtilizzi(report.getNUtilizzi())
+                .nUtilizzi(report.getUtilizzi())
                 .build();
     }
 
@@ -76,7 +76,7 @@ public class ReportServiceImpl implements ReportService {
         return Report.builder()
                 .uuid(reportDTO.getUuid())
                 .userUuid(reportDTO.getUserUuid())
-                .nUtilizzi(reportDTO.getNUtilizzi())
+                .utilizzi(reportDTO.getNUtilizzi())
                 .build();
     }
 }

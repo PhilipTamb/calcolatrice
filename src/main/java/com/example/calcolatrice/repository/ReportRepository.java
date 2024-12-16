@@ -17,7 +17,7 @@ public interface ReportRepository extends JpaRepository<Report, Long> {
     Optional<Report> findByUserUuid(String userUuid);
 
     // Trova tutti i report con numero di utilizzi maggiore di un valore specifico
-    List<Report> findByNUtilizziGreaterThan(int nUtilizzi);
+    List<Report> findByUtilizziGreaterThan(int nUtilizzi);
 
     // Trova tutti i report
     List<Report> findAll();

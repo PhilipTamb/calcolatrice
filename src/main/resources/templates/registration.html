@@ -27,27 +27,28 @@
                                 <p class="text-white-50 mb-5">Registrazione utente</p>
 
                                 <!-- Username input -->
+                                <form action="/register" method="POST">
                                 <div data-mdb-input-init class="form-outline mb-4">
-                                    <input type="text" id="form3Example1" class="form-control" placeholder="Username" />
+                                    <input type="text" id="form3Example1" name="name" class="form-control" placeholder="Username" />
                                 </div>
 
 
                                 <!-- Email input -->
                                 <div data-mdb-input-init class="form-outline mb-4">
-                                    <input type="email" id="form3Example3" class="form-control" placeholder="Indirizzo" />
+                                    <input type="email" id="form3Example3" name="address" class="form-control" placeholder="Indirizzo" />
 
                                 </div>
 
                                 <!-- Password input -->
                                 <div data-mdb-input-init class="form-outline mb-4">
-                                    <input type="password" id="form3Example4" class="form-control"
+                                    <input type="password" id="form3Example4" name="password" class="form-control"
                                         placeholder="Passoword" />
 
                                 </div>
 
                                 <!-- Button registration-->
                             <button data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg px-5" type="submit">Registrati</button>
-
+                                </form>
                         </div>
 
                         <div>

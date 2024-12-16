@@ -21,5 +21,5 @@ public class Report {
     private String userUuid;
 
     @Column(name = "n_utilizzi", nullable = false)
-    private int nUtilizzi;
+    private int utilizzi;
 }

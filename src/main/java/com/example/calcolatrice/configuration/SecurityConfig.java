@@ -27,6 +27,7 @@ public class SecurityConfig {
                         .defaultSuccessUrl("/calcolatrice", true)
                         .permitAll()
                 )
+
                 .logout(logout -> logout
                         .logoutUrl("/logout")
                         .logoutSuccessUrl("/login?logout")
